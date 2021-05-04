@@ -227,6 +227,7 @@ class PayPalButton extends React.Component<PayPalButtonProps, PayPalButtonState>
         script.type = "text/javascript";
         script.src = `https://www.paypal.com/sdk/js?${queryParams.join("&")}`;
         script.async = true;
+        script.id = "payPalSdk"
         script.onload = () => {
             this.setState({ isSdkReady: true });
 
